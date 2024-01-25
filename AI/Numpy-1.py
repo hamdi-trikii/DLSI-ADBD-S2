@@ -64,6 +64,57 @@ print(type(arr1d_obj.tolist()))
 print(arr1d_obj.tolist())
 #> [1, 'a']
 
+'''*********************************************************************************************
+************************************************************************************************'''
+'''3. Comment inspecter la taille et la forme d'un tableau numpy ?'''
+print("3. Comment inspecter la taille et la forme d'un tableau numpy ?")
+
+# Create a 2d array with 3 rows and 4 columns
+list2 = [[1, 2, 3, 4],[3, 4, 5, 6], [5, 6, 7, 8]]
+arr2 = np.array(list2, dtype='float')
+
+#> array([[ 1., 2., 3., 4.],
+#> [ 3., 4., 5., 6.],
+#> [ 5., 6., 7., 8.]])
+# shape
+print("Create a 2d array with 3 rows and 4 columns:")
+print(arr2)
+print('Shape: ', arr2.shape)
+# dtype
+print('Datatype: ', arr2.dtype)
+# size
+print('Size: ', arr2.size)
+# ndim
+print('Num Dimensions: ', arr2.ndim)
+#> Shape: (3, 4)
+#> Datatype: float64
+#> Size: 12
+#> Num Dimensions: 2
+
+
+'''*********************************************************************************************
+************************************************************************************************'''
+"""4. Comment extraire des éléments spécifiques d'un tableau ?"""
+print("4. Comment extraire des éléments spécifiques d'un tableau ?")
+
+#> array([[ 1., 2., 3., 4.],
+#> [ 3., 4., 5., 6.],
+#> [ 5., 6., 7., 8.]])
+
+print(arr2[:2, :2])
+#print(list2[:2, :2]) # error
+
+
+# Get the boolean output by applying the condition to each element.
+b = arr2 > 4
+print(b)
+#> array([[False, False, False, False],
+#> [False, False, True, True],
+#> [ True, True, True, True]], dtype=bool)
+
+print(arr2[b])#only true values
+#> array([ 5., 6., 5., 6., 7., 8.])
+
 
 
 
