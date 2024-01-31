@@ -102,7 +102,7 @@ print("4. Comment extraire des éléments spécifiques d'un tableau ?")
 #> [ 5., 6., 7., 8.]])
 
 print(arr2[:2, :2])
-#print(list2[:2, :2]) # error
+# print(list2[:2, :2]) # error
 
 
 # Get the boolean output by applying the condition to each element.
@@ -116,10 +116,67 @@ print(arr2[b])#only true values
 #> array([ 5., 6., 5., 6., 7., 8.])
 
 
+'''*********************************************************************************************
+************************************************************************************************'''
+"""4.1 Comment inverser les lignes et l'ensemble d'un tableau numpy ?"""
+print("4.1 Comment inverser les lignes et l'ensemble d'un tableau numpy ?")
+
+print("\narr2:\n",arr2)
+# Reverse only the row positions
+print("\nReverse only the row positions arr2[::-1, ]:\n",arr2[::-1, ])
+#> array([[ 5., 6., 7., 8.],
+#> [ 3., 4., 5., 6.],
+#> [ 1., 2., 3., 4.]])
+# Reverse the row and column positions
+print("\nReverse the row and column positions arr2[::-1, ::-1]:\n",arr2[::-1, ::-1])
+#> array([[ 8., 7., 6., 5.],
+#> [ 6., 5., 4., 3.],
+#> [ 4., 3., 2., 1.]])
 
 
+'''*********************************************************************************************
+************************************************************************************************'''
+"""4.2 Comment représenter les valeurs manquantes et l'infini ?"""
+print("4.2 Comment représenter les valeurs manquantes et l'infini ?")
+
+print("arr2:",arr2)
+# Insert a nan and an inf
+arr2[1,1] = np.nan # not a number
+arr2[1,2] = np.inf # infinite
+
+print("\narr2[1,1] = np.nan \narr2[1,2] = np.inf\n=>",arr2)
+#> array([[ 1., 2., 3., 4.],
+#> [ 3., nan, inf, 6.],
+#> [ 5., 6., 7., 8.]])
+# Replace nan and inf with -1. Don't use arr2 == np.nan
+missing_bool = np.isnan(arr2) | np.isinf(arr2)
+arr2[missing_bool] = -1
+print("\nmissing_bool = np.isnan(arr2) | np.isinf(arr2)\narr2[missing_bool] = -1 \n=>",arr2)
+#> array([[ 1., 2., 3., 4.],
+#> [ 3., -1., -1., 6.],
+#> [ 5., 6., 7., 8.]])
 
 
+'''*********************************************************************************************
+************************************************************************************************'''
+"""4.3 Comment calculer la moyenne, le minimum et le maximum sur le ndarray ?"""
+print("4.3 Comment calculer la moyenne, le minimum et le maximum sur le ndarray ?")
 
+print("arr2:\n",arr2)
+# mean, max and min
+print("Mean value is arr2.mean(): ", arr2.mean())
+print("Max value is arr2.max():", arr2.max())
+print("Min value is arr2.min():", arr2.min())
+#> Mean value is: 3.58333333333
+#> Max value is: 8.0
+#> Min value is: -1.0
 
+# Row wise and column wise min
+print("Column wise minimum np.amin(arr2, axis=0): ", np.amin(arr2, axis=0))
+print("Row wise minimum np.amin(arr2, axis=1): ", np.amin(arr2, axis=1))
+#> Column wise minimum: [ 1. -1. -1. 4.]
+#> Row wise minimum: [ 1. -1. 5.]
+# Cumulative Sum
+print("Cumulative Sum np.cumsum(arr2):",np.cumsum(arr2))
+#> array([ 1., 3., 6., 10., 13., 12., 11., 17., 22., 28., 35., 43.])
 
