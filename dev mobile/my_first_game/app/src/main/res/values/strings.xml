@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Guess The Logo App</string>
+    <string name="txtCorrectScore">Your final score is %1$d out of %2$d</string>
+
+</resources>

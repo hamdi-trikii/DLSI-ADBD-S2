@@ -7,7 +7,7 @@ Created on Sat Mar 23 06:54:10 2024
 
 from mrjob.job import MRJob
 
-from mrjob.job import MRJob 
+
 
 class MRmaxTempruture(MRJob):
     

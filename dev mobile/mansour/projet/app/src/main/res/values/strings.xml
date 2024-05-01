@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">projet</string>
+    <string name="tennis">
+        Le tennis est un sport de raquette qui oppose soit deux joueurs soit quatre joueurs qui forment deux équipes de deux.
+
+    </string>
+    <string name="peinture">
+        La peinture est une forme d_expression artistique qui utilise des pigments de couleurs pour créer des œuvres sur une surface plane.
+    </string>
+    <string name="danse">
+        La danse est une forme d_expression corporelle qui utilise des mouvements rythmiques et esthétiques pour communiquer des émotions, des idées ou une histoire
+    </string>
+    <string name="foot">
+Le football, également connu sous le nom de soccer dans certains pays, est un sport collectif dans lequel deux équipes de onze joueurs s_affrontent en tentant de marquer des buts en faisant passer un ballon dans le but adverse.
+    </string>
+
+
+
+</resources>

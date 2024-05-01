@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="get_started" />
+    <string name="your_food">Your Food</string>
+    <string name="enjoy">Enjoy</string>
+    <string name="todo">TODO</string>
+    <string name="promotions" />
+    <string name="search" />
+    <string name="menu" />
+    <string name="on_all_orders_above_150" />
+    <string name="free_box_of_fries" />
+    <string name="today_s_offer" />
+    <string name="categories" />
+    <string name="popular" />
+    <string name="profile" />
+    <string name="Home" />
+    <string name="support" />
+    <string name="settings" />
+    <string name="home" />
+    <string name="Menu">Menu</string>
+    <string name="shopping">shopping</string>
+</resources>

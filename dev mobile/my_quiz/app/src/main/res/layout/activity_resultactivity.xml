@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resultactivity"
+    android:background="@color/colorAccent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:paddingTop="100dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Your Score"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            ></TextView>
+        <TextView
+            android:id="@+id/percent_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:paddingTop="100dp"
+            android:textColor="@color/colorPrimary"
+            android:padding="90dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            ></TextView>
+        <TextView
+            android:id="@+id/correct_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:paddingTop="100dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Your Score"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            ></TextView>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="restartGame"
+        android:textSize="32dp"
+        android:text="Restart Quiz!"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:padding="18dp"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>

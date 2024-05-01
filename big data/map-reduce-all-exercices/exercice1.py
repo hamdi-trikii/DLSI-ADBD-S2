@@ -4,6 +4,7 @@ Created on Sat Mar 23 06:10:00 2024
 
 @author: triki
 """
+
 from mrjob.job import MRJob
 class MRRatingCounter(MRJob):
     
@@ -16,3 +17,24 @@ class MRRatingCounter(MRJob):
 
 if __name__== '__main__':
     MRRatingCounter.run()
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

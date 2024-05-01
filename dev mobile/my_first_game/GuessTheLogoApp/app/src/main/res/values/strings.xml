@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Guess The Logo App</string>
+    <string name="txtCorrectScore">"You've got %1$s out of %2$s correct."</string>
+</resources>
