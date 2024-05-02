@@ -12,12 +12,14 @@ import android.widget.TextView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
-
+import android.content.Intent;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.os.Handler;
+
 
 public class MainActivity extends AppCompatActivity {
     private ImageView mQuizImage;
@@ -55,9 +57,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-                SystemClock.sleep(200);
+                SystemClock.sleep(100);
                 if(QuestionNum==mQuestions.getLength()-1){
                     //result
+                    Intent intent_result=new Intent(MainActivity.this,resultactivity.class);
+                    intent_result.putExtra("totalQuestions",mQuestions.getLength());
+                    intent_result.putExtra("finalScore",mScore);
+                    startActivity(intent_result);
+
                     QuestionNum=0;
                     mQuizNum=1;
                     mScore=0;
@@ -65,7 +72,14 @@ public class MainActivity extends AppCompatActivity {
                     QuestionNum++;
                     mQuizNum++;
                 }
-                updateQuestion();
+                Handler handler= new Handler();
+                handler.postDelayed(new Runnable(){
+                    public void run(){
+                        updateQuestion();
+                    }
+                },1000);
+
+
 
 
             };

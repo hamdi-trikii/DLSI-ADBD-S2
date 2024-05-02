@@ -16,7 +16,7 @@ public class Questions {
     private String mChoice[][]={
         {"AMD","CMD","KMD"},
         {"Mobile","Android","Smart Phone"},
-        {"App Store","Android","Software"},
+        {"playstore","Android","Software"},
         {"Chrome","Android","Software"},
         {"Dell","Mi","HP"},
         {"Drop Box","Android","Software"},
@@ -53,7 +53,7 @@ public class Questions {
     private String mCoorectAnswers[]={
             "AMD",
             "Android",
-            "App Store",
+            "playstore",
             "Chrome",
             "Dell",
             "Drop Box",

@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:id="@+id/answers_layout"
-                android:layout_marginTop="80dp">
+                android:layout_marginTop="90dp">
 
             </LinearLayout>
 
