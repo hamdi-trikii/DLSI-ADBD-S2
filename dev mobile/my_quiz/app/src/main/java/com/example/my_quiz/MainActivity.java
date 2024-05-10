@@ -23,12 +23,13 @@ import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView mQuizImage;
+    private TextView mQuestionView;
+    private TextView mQuizNumView;
     private String mAnswer;
     private int mScore=0;
     private int mQuizNum=1;
     private int QuestionNum=0;
-    private TextView mQuestionView;
-    private TextView mQuizNumView;
+
     private Questions mQuestions=new Questions();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         updateQuestion();//**************
 
         Button submit=findViewById(R.id.button_submit);
+        //****************************************************
+
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 SystemClock.sleep(100);
                 if(QuestionNum==mQuestions.getLength()-1){
                     //result
+                    //**********************************************
                     Intent intent_result=new Intent(MainActivity.this,resultactivity.class);
                     intent_result.putExtra("totalQuestions",mQuestions.getLength());
                     intent_result.putExtra("finalScore",mScore);
@@ -80,12 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 },1000);
 
 
-
-
             };
         });
-
     }
+    //**********************************************//
     private void displayToastcorrectanswer(){
         Toast.makeText(this,"Correct",Toast.LENGTH_SHORT).show();
     }
@@ -99,10 +102,9 @@ public class MainActivity extends AppCompatActivity {
         mQuizNumView.setText(mQuizNum+"/"+String.valueOf(+mQuestions.getLength()));
         mQuestionView.setText(mQuestions.getQuestions(QuestionNum));
         if(mQuestions.getType(QuestionNum)=="radiobutton"){
-            showRadioButtonAnswers(QuestionNum);
-
+            showRadioButtonAnswers(QuestionNum); //func
         }
-        showMainImage();
+        showMainImage();//func
         ScrollView sv= findViewById(R.id.scrollview);
         sv.smoothScrollTo(0,0);
     }

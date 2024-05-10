@@ -112,7 +112,7 @@ def afficher_resultats_acp():
 def afficher_resultats_regroupement():
     """Fonction pour afficher les résultats des méthodes de regroupement."""
     global donnees_normalisees
-
+    
     # K-means
     kmeans = KMeans(n_clusters=2)
     kmeans.fit(donnees_normalisees)

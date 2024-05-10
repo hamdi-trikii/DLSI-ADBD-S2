@@ -26,6 +26,7 @@ public class resultactivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //***********************************************
         txtCorrectText=findViewById(R.id.correct_textview);
         txtPercentText=findViewById(R.id.percent_textview);
 
